@@ -1,4 +1,4 @@
-# sing the Omah-plugin-sps gem with the Gmail_omah gem
+# using the Omah-plugin-sps gem with the Gmail_omah gem
 
     require 'gmail_omah'
     require 'omah-plugin-sps'
