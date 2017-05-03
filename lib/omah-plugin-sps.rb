@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 # file: omah-plugin-sps.rb
 
@@ -25,6 +25,19 @@ class OmahPluginSps
     
     @sps.notice fqm    
 
+  end
+  
+  def on_newmessage(h)
+        
+    if h[:tags] then
+
+      tag =  h[:tags].split.first
+      fqm = "email/notice/%s: from: %s subject: %s %s" % 
+                [tag, h[:from], h[:subject], h[:link]]
+
+      @sps.notice fqm
+#       sleep 0.3
+    end
   end
 
 end
