@@ -36,7 +36,7 @@ class OmahPluginSps
                 [tag, h[:from], h[:subject], h[:link]]
 
       @sps.notice fqm
-#       sleep 0.3
+      sleep 0.3
     end
   end
 
